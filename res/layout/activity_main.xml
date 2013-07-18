@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp"
+    tools:context=".MainActivity" >
+
+    <TextView android:id="@+id/text_question_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/question_one"
+        android:textSize="24sp"
+        android:gravity="center" />
+ 
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/radiogroup_question_one"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_gravity="center_horizontal"
+    	android:orientation="vertical">
+    	<RadioButton android:id="@+id/radio_ecstatic"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:text="@string/ecstatic"
+    	    android:onClick="onRadioButtonClicked"/>
+    	<RadioButton android:id="@+id/radio_happy"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:text="@string/happy"
+    	    android:onClick="onRadioButtonClicked"/>
+    	<RadioButton android:id="@+id/radio_neutral"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:text="@string/neutral"
+    	    android:onClick="onRadioButtonClicked"/>
+    	<RadioButton android:id="@+id/radio_sad"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:text="@string/sad"
+    	    android:onClick="onRadioButtonClicked"/>
+    	<RadioButton android:id="@+id/radio_devastated"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:text="@string/devastated"
+    	    android:onClick="onRadioButtonClicked"/>
+	</RadioGroup>
+    
+    <TextView android:id="@+id/text_question_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/question_two"
+        android:textSize="24sp"
+        android:gravity="center" />
+ 
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/radiogroup_question_two"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical">
+    	<RadioButton android:id="@id/radio_ecstatic"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:text="@string/ecstatic"
+    	    android:onClick="onRadioButtonClickedTwo"/>
+    	<RadioButton android:id="@id/radio_happy"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:text="@string/happy"
+    	    android:onClick="onRadioButtonClickedTwo"/>
+    	<RadioButton android:id="@id/radio_neutral"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:text="@string/neutral"
+    	    android:onClick="onRadioButtonClickedTwo"/>
+    	<RadioButton android:id="@id/radio_sad"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:text="@string/sad"
+    	    android:onClick="onRadioButtonClickedTwo"/>
+    	<RadioButton android:id="@id/radio_devastated"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:text="@string/devastated"
+    	    android:onClick="onRadioButtonClickedTwo"/>
+	</RadioGroup>
+	 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/evaluate"
+        android:onClick="evaluate" />
+    
+</LinearLayout>

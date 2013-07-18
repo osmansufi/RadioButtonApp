@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Questionnaire</string>
+    <string name="menu_settings">Settings</string>
+    <string name="hello_world">Hello World!</string>
+
+    <!-- These two strings refer to the questions used in the app -->
+    <string name="question_one">How would you describe your mood right now?</string>
+    <string name="question_two">And how would you describe your mood last week?</string>
+
+    <!-- The following strings refer to button names for the both questions -->
+    <string name="ecstatic">Ecstatic</string>
+    <string name="happy">Happy</string>
+    <string name="neutral">Neutral</string>
+    <string name="sad">Sad</string>
+    <string name="devastated">Devastated</string>
+
+    <!-- These final two strings refer to the evalution of the responses -->
+    <string name="evaluate">Evaluate</string>
+    <string name="title_activity_display_results">Evaluation Results</string>
+
+</resources>
