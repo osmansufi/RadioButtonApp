@@ -7,7 +7,7 @@
     android:paddingRight="50dp"
     tools:context=".MainActivity" >
 
-    <TextView android:id="@+id/text_question_one"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -19,7 +19,6 @@
  
 
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/radiogroup_question_one"
     	android:layout_width="fill_parent"
     	android:layout_height="wrap_content"
     	android:layout_gravity="center_horizontal"
@@ -51,7 +50,7 @@
     	    android:onClick="onRadioButtonClicked"/>
 	</RadioGroup>
     
-    <TextView android:id="@+id/text_question_two"
+    <TextView 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -63,7 +62,6 @@
  
 
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/radiogroup_question_two"
     	android:layout_width="fill_parent"
     	android:layout_height="wrap_content"
     	android:orientation="vertical">
@@ -93,14 +91,29 @@
     	    android:text="@string/devastated"
     	    android:onClick="onRadioButtonClickedTwo"/>
 	</RadioGroup>
-	 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
+	
+    <LinearLayout 
+        xmlns:android="http://schemas.android.com/apk/res/android"
+   		xmlns:tools="http://schemas.android.com/tools"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_gravity="center_horizontal"
+    	android:layout_marginTop="50dp"
         android:layout_marginBottom="30dp"
-        android:text="@string/evaluate"
-        android:onClick="evaluate" />
+        android:orientation="horizontal" >
+    	<Button
+        	android:layout_width="match_parent"
+        	android:layout_height="match_parent"
+        	android:layout_gravity="center_horizontal"
+        	android:text="@string/evaluate"
+        	android:onClick="evaluate" />
+        	
+    	<Button
+    	    android:layout_width="match_parent"
+        	android:layout_height="match_parent"
+        	android:layout_gravity="center_horizontal"
+        	android:text="@string/clear"
+        	android:onClick="clear" />
+    </LinearLayout>
     
 </LinearLayout>

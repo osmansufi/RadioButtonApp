@@ -122,5 +122,9 @@ public class MainActivity extends Activity {
 		intent.putExtra(EXTRA_MESSAGE, message);
 		startActivity(intent);
 	}
+	
+	public void clear(View view) {
+		// blah
+	}
 
 }

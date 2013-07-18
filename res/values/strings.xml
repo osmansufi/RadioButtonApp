@@ -16,8 +16,10 @@
     <string name="sad">Sad</string>
     <string name="devastated">Devastated</string>
 
-    <!-- These final two strings refer to the evalution of the responses -->
+    <!-- Button Names -->
     <string name="evaluate">Evaluate</string>
+    <string name="clear">Clear</string>
+    
     <string name="title_activity_display_results">Evaluation Results</string>
 
 </resources>
