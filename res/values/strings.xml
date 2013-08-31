@@ -3,13 +3,17 @@
 
     <string name="app_name">Questionnaire</string>
     <string name="menu_settings">Settings</string>
-    <string name="hello_world">Hello World!</string>
+    
+    <!-- Edit Text Field Hint -->
+    <string name="first">First Name</string>
+    <string name="last">Last Name</string>
 
     <!-- These two strings refer to the questions used in the app -->
     <string name="question_one">How would you describe your mood right now?</string>
     <string name="question_two">And how would you describe your mood last week?</string>
+    <string name="question_three">And how would you describe your feelings regarding these intrusive questions?</string>
 
-    <!-- The following strings refer to button names for the both questions -->
+    <!-- The following strings refer to button names for all questions -->
     <string name="ecstatic">Ecstatic</string>
     <string name="happy">Happy</string>
     <string name="neutral">Neutral</string>
@@ -19,6 +23,7 @@
     <!-- Button Names -->
     <string name="evaluate">Evaluate</string>
     <string name="clear">Clear</string>
+    <string name="send">Send Evalution</string>
     
     <string name="title_activity_display_results">Evaluation Results</string>
 

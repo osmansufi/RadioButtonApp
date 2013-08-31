@@ -1,119 +1,217 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingLeft="50dp"
-    android:paddingRight="50dp"
-    tools:context=".MainActivity" >
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="10dp"
-        android:text="@string/question_one"
-        android:textSize="24sp"
-        android:gravity="center" />
- 
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        tools:context=".MainActivity" >
 
-    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-    	android:layout_width="fill_parent"
-    	android:layout_height="wrap_content"
-    	android:layout_gravity="center_horizontal"
-    	android:orientation="vertical">
-    	<RadioButton android:id="@+id/radio_ecstatic"
-    	    android:layout_width="wrap_content"
-    	    android:layout_height="wrap_content"
-    	    android:text="@string/ecstatic"
-    	    android:onClick="onRadioButtonClicked"/>
-    	<RadioButton android:id="@+id/radio_happy"
-    	    android:layout_width="wrap_content"
-    	    android:layout_height="wrap_content"
-    	    android:text="@string/happy"
-    	    android:onClick="onRadioButtonClicked"/>
-    	<RadioButton android:id="@+id/radio_neutral"
-    	    android:layout_width="wrap_content"
-    	    android:layout_height="wrap_content"
-    	    android:text="@string/neutral"
-    	    android:onClick="onRadioButtonClicked"/>
-    	<RadioButton android:id="@+id/radio_sad"
-    	    android:layout_width="wrap_content"
-    	    android:layout_height="wrap_content"
-    	    android:text="@string/sad"
-    	    android:onClick="onRadioButtonClicked"/>
-    	<RadioButton android:id="@+id/radio_devastated"
-    	    android:layout_width="wrap_content"
-    	    android:layout_height="wrap_content"
-    	    android:text="@string/devastated"
-    	    android:onClick="onRadioButtonClicked"/>
-	</RadioGroup>
-    
-    <TextView 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="10dp"
-        android:text="@string/question_two"
-        android:textSize="24sp"
-        android:gravity="center" />
- 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="@string/question_one"
+            android:textSize="24sp" />
 
-    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-    	android:layout_width="fill_parent"
-    	android:layout_height="wrap_content"
-    	android:orientation="vertical">
-    	<RadioButton android:id="@id/radio_ecstatic"
-    	    android:layout_width="wrap_content"
-    	    android:layout_height="wrap_content"
-    	    android:text="@string/ecstatic"
-    	    android:onClick="onRadioButtonClickedTwo"/>
-    	<RadioButton android:id="@id/radio_happy"
-    	    android:layout_width="wrap_content"
-    	    android:layout_height="wrap_content"
-    	    android:text="@string/happy"
-    	    android:onClick="onRadioButtonClickedTwo"/>
-    	<RadioButton android:id="@id/radio_neutral"
-    	    android:layout_width="wrap_content"
-    	    android:layout_height="wrap_content"
-    	    android:text="@string/neutral"
-    	    android:onClick="onRadioButtonClickedTwo"/>
-    	<RadioButton android:id="@id/radio_sad"
-    	    android:layout_width="wrap_content"
-    	    android:layout_height="wrap_content"
-    	    android:text="@string/sad"
-    	    android:onClick="onRadioButtonClickedTwo"/>
-    	<RadioButton android:id="@id/radio_devastated"
-    	    android:layout_width="wrap_content"
-    	    android:layout_height="wrap_content"
-    	    android:text="@string/devastated"
-    	    android:onClick="onRadioButtonClickedTwo"/>
-	</RadioGroup>
-	
-    <LinearLayout 
-        xmlns:android="http://schemas.android.com/apk/res/android"
-   		xmlns:tools="http://schemas.android.com/tools"
-    	android:layout_width="wrap_content"
-    	android:layout_height="wrap_content"
-    	android:layout_gravity="center_horizontal"
-    	android:layout_marginTop="50dp"
-        android:layout_marginBottom="30dp"
-        android:orientation="horizontal" >
-    	<Button
-        	android:layout_width="match_parent"
-        	android:layout_height="match_parent"
-        	android:layout_gravity="center_horizontal"
-        	android:text="@string/evaluate"
-        	android:onClick="evaluate" />
-        	
-    	<Button
-    	    android:layout_width="match_parent"
-        	android:layout_height="match_parent"
-        	android:layout_gravity="center_horizontal"
-        	android:text="@string/clear"
-        	android:onClick="clear" />
+        <RadioGroup
+            android:id="@+id/question"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/radio_ecstatic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/ecstatic" />
+
+            <RadioButton
+                android:id="@+id/radio_happy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/happy" />
+
+            <RadioButton
+                android:id="@+id/radio_neutral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/neutral" />
+
+            <RadioButton
+                android:id="@+id/radio_sad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/sad" />
+
+            <RadioButton
+                android:id="@+id/radio_devastated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/devastated" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="@string/question_two"
+            android:textSize="24sp" />
+
+        <RadioGroup
+            android:id="@+id/question_two"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@id/radio_ecstatic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClickedTwo"
+                android:text="@string/ecstatic" />
+
+            <RadioButton
+                android:id="@id/radio_happy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClickedTwo"
+                android:text="@string/happy" />
+
+            <RadioButton
+                android:id="@id/radio_neutral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClickedTwo"
+                android:text="@string/neutral" />
+
+            <RadioButton
+                android:id="@id/radio_sad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClickedTwo"
+                android:text="@string/sad" />
+
+            <RadioButton
+                android:id="@id/radio_devastated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClickedTwo"
+                android:text="@string/devastated" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="@string/question_three"
+            android:textSize="24sp" />
+
+        <RadioGroup
+            android:id="@+id/question_three"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@id/radio_ecstatic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClickedThree"
+                android:text="@string/ecstatic" />
+
+            <RadioButton
+                android:id="@id/radio_happy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClickedThree"
+                android:text="@string/happy" />
+
+            <RadioButton
+                android:id="@id/radio_neutral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClickedThree"
+                android:text="@string/neutral" />
+
+            <RadioButton
+                android:id="@id/radio_sad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClickedThree"
+                android:text="@string/sad" />
+
+            <RadioButton
+                android:id="@id/radio_devastated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClickedThree"
+                android:text="@string/devastated" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/edit_firstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:hint="@string/first" />
+
+        <EditText
+            android:id="@+id/edit_lastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/last" />
+
+        <LinearLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:onClick="evaluate"
+                android:text="@string/evaluate" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:onClick="sendResults"
+                android:text="@string/send" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:onClick="clear"
+                android:text="@string/clear" />
+        </LinearLayout>
     </LinearLayout>
-    
-</LinearLayout>
+
+</ScrollView>

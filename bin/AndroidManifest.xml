@@ -21,8 +21,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!-- 
+        </activity> 
         <activity
             android:name="com.osmansufi.radiobuttonapp.DisplayResultsActivity"
             android:label="@string/title_activity_display_results"
@@ -31,7 +30,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.osmansufi.radiobuttonapp.MainActivity" />
         </activity>
-         -->
+         
     </application>
 
 </manifest>
