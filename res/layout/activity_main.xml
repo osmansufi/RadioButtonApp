@@ -202,13 +202,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
-                android:onClick="sendResults"
-                android:text="@string/send" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal"
                 android:onClick="clear"
                 android:text="@string/clear" />
         </LinearLayout>

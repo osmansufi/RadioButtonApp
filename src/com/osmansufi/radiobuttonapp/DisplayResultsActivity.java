@@ -1,11 +1,18 @@
 package com.osmansufi.radiobuttonapp;
 
+import java.util.Locale;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
+import android.view.Gravity;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -16,19 +23,14 @@ public class DisplayResultsActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		/*
-		 * Intent firstNameIntent = getIntent(); String first =
-		 * firstNameIntent.getStringExtra("first");
-		 */
-
-		String first = getIntent().getExtras().getString("first");
-		String last = getIntent().getExtras().getString("last");
+		final String first = (getIntent().getExtras().getString("first")).toUpperCase(Locale.getDefault());
+		final String last = (getIntent().getExtras().getString("last")).toUpperCase(Locale.getDefault());
 		double s1 = getIntent().getExtras().getDouble("score1");
 		double s2 = getIntent().getExtras().getDouble("score2");
 		double s3 = getIntent().getExtras().getDouble("score3");
 
 		int average = (int) Math.round((s1 + s2 + s3) / 3);
-		String message = results(average);
+		final String message = results(average);
 
 		// Layout for the DisplayResultsActivity View
 		LinearLayout displayResults = new LinearLayout(this);
@@ -79,8 +81,38 @@ public class DisplayResultsActivity extends Activity {
 		TextView assessment = new TextView(this);
 		assessment.setTextSize(30);
 		assessment.setText(message);
-		assessment.setPadding(10, 0, 10, 10);
+		assessment.setPadding(10, 0, 10, 200);
 		displayResults.addView(assessment);
+		
+		// Send evaluation button
+		Button sendEvaluation = new Button(this);
+		sendEvaluation.setText("Send Evaluation");
+		//sendEvaluation.setPadding(0, 30, 0, 30);
+		
+		LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(
+                LayoutParams.WRAP_CONTENT,
+                LayoutParams.WRAP_CONTENT);
+		param.gravity=Gravity.CENTER;
+		sendEvaluation.setLayoutParams(param);
+		
+		sendEvaluation.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+        		String eol = System.getProperty("line.separator");
+
+        		Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+        				"mailto", "", null));
+        		emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Test Results");
+        		emailIntent.putExtra(Intent.EXTRA_TEXT, "Name: " + last + ", " + first
+        				+ eol + eol
+        				+ "Assessment: " + eol
+        				+ message);
+        		startActivity(Intent.createChooser(emailIntent, "Send email..."));
+            }
+        });
+
+		
+		displayResults.addView(sendEvaluation);
 
 		// Set the text view as the activity layout
 		setContentView(displayResults);
